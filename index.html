@@ -26,11 +26,7 @@
             --text-muted: #94a3b8;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Tajawal', sans-serif;
@@ -40,17 +36,13 @@
             line-height: 1.7;
         }
 
-        /* Animated Background */
         .bg-animation {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             z-index: -1;
             overflow: hidden;
         }
-
         .bg-animation .orb {
             position: absolute;
             border-radius: 50%;
@@ -58,34 +50,9 @@
             opacity: 0.4;
             animation: float 20s infinite ease-in-out;
         }
-
-        .orb-1 {
-            width: 400px;
-            height: 400px;
-            background: var(--primary);
-            top: -100px;
-            right: -100px;
-            animation-delay: 0s;
-        }
-
-        .orb-2 {
-            width: 300px;
-            height: 300px;
-            background: var(--secondary);
-            bottom: -50px;
-            left: -50px;
-            animation-delay: -5s;
-        }
-
-        .orb-3 {
-            width: 250px;
-            height: 250px;
-            background: var(--accent);
-            top: 50%;
-            left: 50%;
-            animation-delay: -10s;
-        }
-
+        .orb-1 { width: 400px; height: 400px; background: var(--primary); top: -100px; right: -100px; }
+        .orb-2 { width: 300px; height: 300px; background: var(--secondary); bottom: -50px; left: -50px; animation-delay: -5s; }
+        .orb-3 { width: 250px; height: 250px; background: var(--accent); top: 50%; left: 50%; animation-delay: -10s; }
         @keyframes float {
             0%, 100% { transform: translate(0, 0) scale(1); }
             25% { transform: translate(30px, -30px) scale(1.1); }
@@ -93,7 +60,6 @@
             75% { transform: translate(20px, 10px) scale(1.05); }
         }
 
-        /* Glass Effect Base */
         .glass {
             background: var(--glass-bg);
             backdrop-filter: blur(20px);
@@ -102,14 +68,6 @@
             box-shadow: 0 8px 32px 0 var(--glass-shadow);
         }
 
-        .glass-strong {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(30px);
-            -webkit-backdrop-filter: blur(30px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-        }
-
-        /* Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -118,13 +76,11 @@
             padding: 1rem 2rem;
             transition: all 0.3s ease;
         }
-
         nav.scrolled {
             background: rgba(15, 23, 42, 0.8);
             backdrop-filter: blur(20px);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
         }
-
         .nav-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -132,7 +88,6 @@
             justify-content: space-between;
             align-items: center;
         }
-
         .logo {
             display: flex;
             align-items: center;
@@ -142,20 +97,17 @@
             color: var(--text-primary);
             text-decoration: none;
         }
-
         .logo i {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-size: 2rem;
         }
-
         .nav-links {
             display: flex;
             gap: 2rem;
             list-style: none;
         }
-
         .nav-links a {
             color: var(--text-secondary);
             text-decoration: none;
@@ -164,7 +116,6 @@
             position: relative;
             padding: 0.5rem 0;
         }
-
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -175,33 +126,9 @@
             background: linear-gradient(90deg, var(--primary), var(--secondary));
             transition: width 0.3s ease;
         }
+        .nav-links a:hover { color: var(--text-primary); }
+        .nav-links a:hover::after { width: 100%; }
 
-        .nav-links a:hover {
-            color: var(--text-primary);
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-cta {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-            padding: 0.6rem 1.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-
-        .nav-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
-        }
-
-        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -210,13 +137,11 @@
             padding: 8rem 2rem 4rem;
             position: relative;
         }
-
         .hero-content {
             max-width: 900px;
             text-align: center;
             z-index: 1;
         }
-
         .hero-badge {
             display: inline-flex;
             align-items: center;
@@ -226,13 +151,8 @@
             font-size: 0.9rem;
             font-weight: 500;
             margin-bottom: 2rem;
-            animation: fadeInUp 0.8s ease;
         }
-
-        .hero-badge i {
-            color: var(--success);
-        }
-
+        .hero-badge i { color: var(--success); }
         .hero h1 {
             font-size: 4rem;
             font-weight: 900;
@@ -241,9 +161,7 @@
             background: linear-gradient(135deg, var(--text-primary), var(--primary-light));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: fadeInUp 0.8s ease 0.2s both;
         }
-
         .hero p {
             font-size: 1.25rem;
             color: var(--text-secondary);
@@ -251,17 +169,13 @@
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
-            animation: fadeInUp 0.8s ease 0.4s both;
         }
-
         .hero-buttons {
             display: flex;
             gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
-            animation: fadeInUp 0.8s ease 0.6s both;
         }
-
         .btn-primary {
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: white;
@@ -277,12 +191,10 @@
             align-items: center;
             gap: 0.5rem;
         }
-
         .btn-primary:hover {
             transform: translateY(-3px);
             box-shadow: 0 15px 40px rgba(99, 102, 241, 0.4);
         }
-
         .btn-secondary {
             background: transparent;
             color: var(--text-primary);
@@ -298,13 +210,11 @@
             align-items: center;
             gap: 0.5rem;
         }
-
         .btn-secondary:hover {
             background: var(--glass-bg);
             border-color: var(--primary-light);
         }
 
-        /* Stats Bar */
         .stats-bar {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -315,19 +225,16 @@
             position: relative;
             z-index: 2;
         }
-
         .stat-card {
             padding: 2rem;
             border-radius: 20px;
             text-align: center;
             transition: all 0.4s ease;
         }
-
         .stat-card:hover {
             transform: translateY(-5px);
             border-color: var(--primary-light);
         }
-
         .stat-number {
             font-size: 2.5rem;
             font-weight: 900;
@@ -336,24 +243,17 @@
             -webkit-text-fill-color: transparent;
             margin-bottom: 0.5rem;
         }
+        .stat-label { color: var(--text-muted); font-size: 0.95rem; }
 
-        .stat-label {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        /* Section Styles */
         section {
             padding: 6rem 2rem;
             max-width: 1400px;
             margin: 0 auto;
         }
-
         .section-header {
             text-align: center;
             margin-bottom: 4rem;
         }
-
         .section-header h2 {
             font-size: 2.5rem;
             font-weight: 800;
@@ -362,7 +262,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
         .section-header p {
             color: var(--text-secondary);
             font-size: 1.1rem;
@@ -370,44 +269,37 @@
             margin: 0 auto;
         }
 
-        /* Problems Section */
-        .problems-grid {
+        .problems-grid, .solutions-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
         }
-
-        .problem-card {
+        .problem-card, .solution-card {
             padding: 2.5rem;
             border-radius: 24px;
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
         }
-
-        .problem-card::before {
+        .problem-card::before, .solution-card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 4px;
-            background: linear-gradient(90deg, var(--danger), var(--warning));
             transform: scaleX(0);
             transform-origin: right;
             transition: transform 0.4s ease;
         }
+        .problem-card::before { background: linear-gradient(90deg, var(--danger), var(--warning)); }
+        .solution-card::before { background: linear-gradient(90deg, var(--success), var(--secondary)); }
+        .problem-card:hover::before, .solution-card:hover::before { transform: scaleX(1); }
+        .problem-card:hover, .solution-card:hover { transform: translateY(-8px); }
+        .problem-card:hover { border-color: rgba(248, 113, 113, 0.3); }
+        .solution-card:hover { border-color: rgba(52, 211, 153, 0.3); }
 
-        .problem-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .problem-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(248, 113, 113, 0.3);
-        }
-
-        .problem-icon {
+        .problem-icon, .solution-icon {
             width: 60px;
             height: 60px;
             border-radius: 16px;
@@ -416,141 +308,48 @@
             justify-content: center;
             font-size: 1.5rem;
             margin-bottom: 1.5rem;
-            background: rgba(248, 113, 113, 0.1);
-            color: var(--danger);
         }
+        .problem-icon { background: rgba(248, 113, 113, 0.1); color: var(--danger); }
+        .solution-icon { background: rgba(52, 211, 153, 0.1); color: var(--success); }
 
-        .problem-card h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-        }
-
-        .problem-card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.8;
-        }
-
-        .problem-tag {
+        .problem-tag, .solution-tag {
             display: inline-block;
             padding: 0.25rem 0.75rem;
             border-radius: 50px;
             font-size: 0.8rem;
             font-weight: 600;
             margin-top: 1rem;
-            background: rgba(248, 113, 113, 0.1);
-            color: var(--danger);
         }
+        .problem-tag { background: rgba(248, 113, 113, 0.1); color: var(--danger); }
+        .solution-tag { background: rgba(52, 211, 153, 0.1); color: var(--success); }
 
-        /* Solutions Section */
-        .solutions-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .solution-card {
-            padding: 2.5rem;
-            border-radius: 24px;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .solution-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--success), var(--secondary));
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform 0.4s ease;
-        }
-
-        .solution-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .solution-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(52, 211, 153, 0.3);
-        }
-
-        .solution-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            background: rgba(52, 211, 153, 0.1);
-            color: var(--success);
-        }
-
-        .solution-card h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-        }
-
-        .solution-card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.8;
-        }
-
-        .solution-tag {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-top: 1rem;
-            background: rgba(52, 211, 153, 0.1);
-            color: var(--success);
-        }
-
-        /* Articles Section */
         .articles-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
-
         .article-card {
             border-radius: 24px;
             overflow: hidden;
             transition: all 0.4s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
-
         .article-card:hover {
             transform: translateY(-8px);
             border-color: var(--primary-light);
         }
-
         .article-image {
             width: 100%;
             height: 200px;
-            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 3rem;
             color: rgba(255, 255, 255, 0.3);
         }
-
-        .article-content {
-            padding: 1.5rem;
-        }
-
+        .article-content { padding: 1.5rem; }
         .article-meta {
             display: flex;
             gap: 1rem;
@@ -558,7 +357,6 @@
             font-size: 0.85rem;
             color: var(--text-muted);
         }
-
         .article-card h3 {
             font-size: 1.1rem;
             font-weight: 700;
@@ -566,13 +364,11 @@
             color: var(--text-primary);
             line-height: 1.5;
         }
-
         .article-card p {
             color: var(--text-secondary);
             font-size: 0.9rem;
             line-height: 1.7;
         }
-
         .read-more {
             display: inline-flex;
             align-items: center;
@@ -583,12 +379,8 @@
             margin-top: 1rem;
             transition: gap 0.3s ease;
         }
+        .read-more:hover { gap: 0.75rem; }
 
-        .read-more:hover {
-            gap: 0.75rem;
-        }
-
-        /* Newsletter Section */
         .newsletter {
             padding: 4rem;
             border-radius: 30px;
@@ -596,18 +388,12 @@
             max-width: 800px;
             margin: 0 auto;
         }
-
         .newsletter h2 {
             font-size: 2rem;
             font-weight: 800;
             margin-bottom: 1rem;
         }
-
-        .newsletter p {
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-        }
-
+        .newsletter p { color: var(--text-secondary); margin-bottom: 2rem; }
         .newsletter-form {
             display: flex;
             gap: 1rem;
@@ -615,7 +401,6 @@
             margin: 0 auto;
             flex-wrap: wrap;
         }
-
         .newsletter-form input {
             flex: 1;
             min-width: 250px;
@@ -629,23 +414,17 @@
             outline: none;
             transition: all 0.3s ease;
         }
-
         .newsletter-form input:focus {
             border-color: var(--primary-light);
             background: rgba(255, 255, 255, 0.08);
         }
+        .newsletter-form input::placeholder { color: var(--text-muted); }
 
-        .newsletter-form input::placeholder {
-            color: var(--text-muted);
-        }
-
-        /* Footer */
         footer {
             padding: 3rem 2rem;
             border-top: 1px solid var(--glass-border);
             margin-top: 4rem;
         }
-
         .footer-content {
             max-width: 1400px;
             margin: 0 auto;
@@ -653,7 +432,6 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 3rem;
         }
-
         .footer-brand h3 {
             font-size: 1.5rem;
             font-weight: 800;
@@ -662,43 +440,26 @@
             align-items: center;
             gap: 0.75rem;
         }
-
-        .footer-brand p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-
+        .footer-brand p { color: var(--text-secondary); font-size: 0.95rem; }
         .footer-links h4 {
             font-size: 1.1rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
             color: var(--text-primary);
         }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.75rem;
-        }
-
+        .footer-links ul { list-style: none; }
+        .footer-links li { margin-bottom: 0.75rem; }
         .footer-links a {
             color: var(--text-secondary);
             text-decoration: none;
             transition: color 0.3s ease;
         }
-
-        .footer-links a:hover {
-            color: var(--primary-light);
-        }
-
+        .footer-links a:hover { color: var(--primary-light); }
         .social-links {
             display: flex;
             gap: 1rem;
             margin-top: 1.5rem;
         }
-
         .social-links a {
             width: 40px;
             height: 40px;
@@ -711,13 +472,11 @@
             color: var(--text-secondary);
             transition: all 0.3s ease;
         }
-
         .social-links a:hover {
             background: var(--primary);
             color: white;
             transform: translateY(-3px);
         }
-
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
@@ -727,96 +486,30 @@
             font-size: 0.9rem;
         }
 
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-darker); }
+        ::-webkit-scrollbar-thumb { background: var(--primary-dark); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--primary); }
 
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--bg-darker);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary-dark);
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--primary);
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .stats-bar {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            section {
-                padding: 4rem 1rem;
-            }
-
-            .newsletter {
-                padding: 2rem;
-            }
-        }
-
-        /* Particle Canvas */
-        #particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            pointer-events: none;
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+            .stats-bar { grid-template-columns: repeat(2, 1fr); }
+            section { padding: 4rem 1rem; }
+            .newsletter { padding: 2rem; }
         }
     </style>
 </head>
 <body>
-    <!-- Background Animation -->
     <div class="bg-animation">
         <div class="orb orb-1"></div>
         <div class="orb orb-2"></div>
         <div class="orb orb-3"></div>
     </div>
 
-    <canvas id="particles"></canvas>
-
-    <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">
+            <a href="./index.html" class="logo">
                 <i class="fas fa-brain"></i>
                 <span>AI Hub</span>
             </a>
@@ -826,11 +519,10 @@
                 <li><a href="#articles">المقالات</a></li>
                 <li><a href="#newsletter">النشرة البريدية</a></li>
             </ul>
-            <a href="#newsletter" class="nav-cta">انضم إلينا</a>
+            <a href="#newsletter" class="btn-primary" style="padding: 0.6rem 1.5rem; font-size: 1rem;">انضم إلينا</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <div class="hero-badge glass">
@@ -852,7 +544,6 @@
         </div>
     </section>
 
-    <!-- Stats Bar -->
     <div class="stats-bar">
         <div class="stat-card glass">
             <div class="stat-number">+150</div>
@@ -872,57 +563,44 @@
         </div>
     </div>
 
-    <!-- Problems Section -->
     <section id="problems">
-        <div class="section-header fade-in">
+        <div class="section-header">
             <h2>أبرز مشكلات الذكاء الاصطناعي</h2>
             <p>تحديات وعقبات تواجه تطوير وتطبيق أنظمة الذكاء الاصطناعي في مختلف المجالات</p>
         </div>
         <div class="problems-grid">
-            <div class="problem-card glass fade-in">
-                <div class="problem-icon">
-                    <i class="fas fa-shield-halved"></i>
-                </div>
+            <div class="problem-card glass">
+                <div class="problem-icon"><i class="fas fa-shield-halved"></i></div>
                 <h3>التحيز والتمييز</h3>
                 <p>تعاني نماذج الذكاء الاصطناعي من التحيزات المدمجة في بيانات التدريب، مما يؤدي إلى نتائج تمييزية ضد فئات معينة من المستخدمين.</p>
                 <span class="problem-tag">أخلاقي</span>
             </div>
-            <div class="problem-card glass fade-in">
-                <div class="problem-icon">
-                    <i class="fas fa-database"></i>
-                </div>
+            <div class="problem-card glass">
+                <div class="problem-icon"><i class="fas fa-database"></i></div>
                 <h3>جودة البيانات</h3>
                 <p>نقص البيانات عالية الجودة والموثوقة يؤثر سلباً على أداء النماذج، خاصة في اللغة العربية والمجالات المتخصصة.</p>
                 <span class="problem-tag">تقني</span>
             </div>
-            <div class="problem-card glass fade-in">
-                <div class="problem-icon">
-                    <i class="fas fa-lock"></i>
-                </div>
+            <div class="problem-card glass">
+                <div class="problem-icon"><i class="fas fa-lock"></i></div>
                 <h3>الخصوصية والأمان</h3>
                 <p>مخاوف متزايدة حول تسريب البيانات الشخصية واستخدامها في تدريب النماذج دون موافقة صريحة من المستخدمين.</p>
                 <span class="problem-tag">قانوني</span>
             </div>
-            <div class="problem-card glass fade-in">
-                <div class="problem-icon">
-                    <i class="fas fa-bolt"></i>
-                </div>
+            <div class="problem-card glass">
+                <div class="problem-icon"><i class="fas fa-bolt"></i></div>
                 <h3>استهلاك الطاقة</h3>
                 <p>تدريب النماذج الكبيرة يتطلب موارد حاسوبية هائلة واستهلاكاً عالياً للطاقة، مما يثير مخاوف بيئية.</p>
                 <span class="problem-tag">بيئي</span>
             </div>
-            <div class="problem-card glass fade-in">
-                <div class="problem-icon">
-                    <i class="fas fa-question-circle"></i>
-                </div>
+            <div class="problem-card glass">
+                <div class="problem-icon"><i class="fas fa-question-circle"></i></div>
                 <h3>الصندوق الأسود</h3>
                 <p>صعوبة فهم كيفية اتخاذ النماذج لقراراتها، مما يحد من القدرة على الثقة بنتائجها في التطبيقات الحساسة.</p>
                 <span class="problem-tag">تفسيري</span>
             </div>
-            <div class="problem-card glass fade-in">
-                <div class="problem-icon">
-                    <i class="fas fa-robot"></i>
-                </div>
+            <div class="problem-card glass">
+                <div class="problem-icon"><i class="fas fa-robot"></i></div>
                 <h3>الاستبدال الوظيفي</h3>
                 <p>المخاوف من فقدان الوظائف التقليدية لصالح الأتمتة الذكية، خاصة في المهام الإدارية والإبداعية.</p>
                 <span class="problem-tag">اجتماعي</span>
@@ -930,57 +608,44 @@
         </div>
     </section>
 
-    <!-- Solutions Section -->
     <section id="solutions">
-        <div class="section-header fade-in">
+        <div class="section-header">
             <h2>حلول مبتكرة ومقترحة</h2>
             <p>استراتيجيات وتقنيات عملية للتغلب على تحديات الذكاء الاصطناعي</p>
         </div>
         <div class="solutions-grid">
-            <div class="solution-card glass fade-in">
-                <div class="solution-icon">
-                    <i class="fas fa-scale-balanced"></i>
-                </div>
+            <div class="solution-card glass">
+                <div class="solution-icon"><i class="fas fa-scale-balanced"></i></div>
                 <h3>تدقيق النماذج</h3>
                 <p>تطبيق إطارات عمل للتدقيق المستمر في النماذج لاكتشاف التحيزات ومعالجتها قبل النشر، مع إشراك فرق متنوعة في عملية المراجعة.</p>
                 <span class="solution-tag">أخلاقي</span>
             </div>
-            <div class="solution-card glass fade-in">
-                <div class="solution-icon">
-                    <i class="fas fa-language"></i>
-                </div>
+            <div class="solution-card glass">
+                <div class="solution-icon"><i class="fas fa-language"></i></div>
                 <h3>تعزيز البيانات العربية</h3>
                 <p>بناء مستودعات بيانات عربية عالية الجودة وتطوير أدوات معالجة لغوية متقدمة للتغلب على نقص الموارد اللغوية.</p>
                 <span class="solution-tag">تقني</span>
             </div>
-            <div class="solution-card glass fade-in">
-                <div class="solution-icon">
-                    <i class="fas fa-user-shield"></i>
-                </div>
+            <div class="solution-card glass">
+                <div class="solution-icon"><i class="fas fa-user-shield"></i></div>
                 <h3>التشفير التفاضلي</h3>
                 <p>استخدام تقنيات التشفير التفاضلي والتعلم الموحد لحماية بيانات المستخدمين أثناء تدريب النماذج دون المساس بالخصوصية.</p>
                 <span class="solution-tag">أمني</span>
             </div>
-            <div class="solution-card glass fade-in">
-                <div class="solution-icon">
-                    <i class="fas fa-leaf"></i>
-                </div>
+            <div class="solution-card glass">
+                <div class="solution-icon"><i class="fas fa-leaf"></i></div>
                 <h3>نماذج خضراء</h3>
                 <p>تطوير نماذج مدمجة وفعالة من حيث استهلاك الطاقة، مع استخدام مراكز بيانات تعتمد على الطاقة المتجددة.</p>
                 <span class="solution-tag">بيئي</span>
             </div>
-            <div class="solution-card glass fade-in">
-                <div class="solution-icon">
-                    <i class="fas fa-magnifying-glass-chart"></i>
-                </div>
+            <div class="solution-card glass">
+                <div class="solution-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
                 <h3>الذكاء الاصطناعي الموثوق</h3>
                 <p>تطوير تقنيات تفسيرية (XAI) تتيح فهم قرارات النماذج، مع توثيق العمليات وإنشاء سجلات شفافة للقرارات.</p>
                 <span class="solution-tag">تفسيري</span>
             </div>
-            <div class="solution-card glass fade-in">
-                <div class="solution-icon">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
+            <div class="solution-card glass">
+                <div class="solution-icon"><i class="fas fa-graduation-cap"></i></div>
                 <h3>إعادة التأهيل المستمر</h3>
                 <p>برامج تدريبية مستمرة للعاملين على التكيف مع الأدوات الذكية، مع التركيز على المهارات الإنسانية غير القابلة للأتمتة.</p>
                 <span class="solution-tag">اجتماعي</span>
@@ -988,15 +653,14 @@
         </div>
     </section>
 
-    <!-- Articles Section -->
     <section id="articles">
-        <div class="section-header fade-in">
+        <div class="section-header">
             <h2>أحدث المقالات والتحليلات</h2>
             <p>رؤى عميقة وتحليلات متخصصة في عالم الذكاء الاصطناعي</p>
         </div>
         <div class="articles-grid">
-            <div class="article-card glass fade-in">
-                <div class="article-image">
+            <a href="./article1.html" class="article-card glass">
+                <div class="article-image" style="background: linear-gradient(135deg, var(--primary-dark), var(--primary));">
                     <i class="fas fa-brain"></i>
                 </div>
                 <div class="article-content">
@@ -1006,13 +670,13 @@
                     </div>
                     <h3>مستقبل النماذج اللغوية الكبيرة في العالم العربي</h3>
                     <p>تحليل شامل لفرص وتحديات تطوير نماذج لغوية متخصصة للغة العربية وآفاقها المستقبلية.</p>
-                    <a href="#" class="read-more">
+                    <span class="read-more">
                         اقرأ المزيد
                         <i class="fas fa-arrow-left"></i>
-                    </a>
+                    </span>
                 </div>
-            </div>
-            <div class="article-card glass fade-in">
+            </a>
+            <a href="./article2.html" class="article-card glass">
                 <div class="article-image" style="background: linear-gradient(135deg, #06b6d4, #0891b2);">
                     <i class="fas fa-shield-halved"></i>
                 </div>
@@ -1023,13 +687,13 @@
                     </div>
                     <h3>دليل عملي لحماية الخصوصية في تطبيقات الذكاء الاصطناعي</h3>
                     <p>استراتيجيات وتقنيات فعالة لضمان خصوصية المستخدمين أثناء تطوير ونشر أنظمة الذكاء الاصطناعي.</p>
-                    <a href="#" class="read-more">
+                    <span class="read-more">
                         اقرأ المزيد
                         <i class="fas fa-arrow-left"></i>
-                    </a>
+                    </span>
                 </div>
-            </div>
-            <div class="article-card glass fade-in">
+            </a>
+            <a href="./article3.html" class="article-card glass">
                 <div class="article-image" style="background: linear-gradient(135deg, #f472b6, #db2777);">
                     <i class="fas fa-microchip"></i>
                 </div>
@@ -1040,18 +704,17 @@
                     </div>
                     <h3>الذكاء الاصطناعي المستدام: نحو تكنولوجيا خضراء</h3>
                     <p>كيف يمكن تقليل البصمة الكربونية لنماذج الذكاء الاصطناعي دون المساس بالأداء والدقة.</p>
-                    <a href="#" class="read-more">
+                    <span class="read-more">
                         اقرأ المزيد
                         <i class="fas fa-arrow-left"></i>
-                    </a>
+                    </span>
                 </div>
-            </div>
+            </a>
         </div>
     </section>
 
-    <!-- Newsletter Section -->
     <section id="newsletter">
-        <div class="newsletter glass-strong fade-in">
+        <div class="newsletter glass" style="background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(30px);">
             <h2>انضم إلى مجتمعنا</h2>
             <p>احصل على أحدث التحليلات والحلول في مجال الذكاء الاصطناعي مباشرة إلى بريدك</p>
             <form class="newsletter-form" onsubmit="event.preventDefault(); alert('شكراً لاشتراكك!');">
@@ -1064,7 +727,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-brand">
@@ -1114,151 +776,19 @@
     </footer>
 
     <script>
-        // Navbar scroll effect
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+            if (window.scrollY > 50) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
         });
 
-        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         });
-
-        // Fade in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Particle System
-        const canvas = document.getElementById('particles');
-        const ctx = canvas.getContext('2d');
-        let particles = [];
-        let mouse = { x: null, y: null };
-
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-
-        resizeCanvas();
-        window.addEventListener('resize', resizeCanvas);
-
-        class Particle {
-            constructor() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 2 + 0.5;
-                this.speedX = (Math.random() - 0.5) * 0.5;
-                this.speedY = (Math.random() - 0.5) * 0.5;
-                this.opacity = Math.random() * 0.5 + 0.1;
-            }
-
-            update() {
-                this.x += this.speedX;
-                this.y += this.speedY;
-
-                if (this.x > canvas.width) this.x = 0;
-                if (this.x < 0) this.x = canvas.width;
-                if (this.y > canvas.height) this.y = 0;
-                if (this.y < 0) this.y = canvas.height;
-
-                // Mouse interaction
-                if (mouse.x != null) {
-                    const dx = mouse.x - this.x;
-                    const dy = mouse.y - this.y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-                    if (distance < 150) {
-                        const force = (150 - distance) / 150;
-                        this.x -= dx * force * 0.02;
-                        this.y -= dy * force * 0.02;
-                    }
-                }
-            }
-
-            draw() {
-                ctx.fillStyle = `rgba(99, 102, 241, ${this.opacity})`;
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fill();
-            }
-        }
-
-        function initParticles() {
-            particles = [];
-            const particleCount = Math.min(window.innerWidth / 10, 100);
-            for (let i = 0; i < particleCount; i++) {
-                particles.push(new Particle());
-            }
-        }
-
-        function animateParticles() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            particles.forEach(particle => {
-                particle.update();
-                particle.draw();
-            });
-
-            // Draw connections
-            particles.forEach((a, index) => {
-                particles.slice(index + 1).forEach(b => {
-                    const dx = a.x - b.x;
-                    const dy = a.y - b.y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-
-                    if (distance < 100) {
-                        ctx.strokeStyle = `rgba(99, 102, 241, ${0.1 * (1 - distance / 100)})`;
-                        ctx.lineWidth = 0.5;
-                        ctx.beginPath();
-                        ctx.moveTo(a.x, a.y);
-                        ctx.lineTo(b.x, b.y);
-                        ctx.stroke();
-                    }
-                });
-            });
-
-            requestAnimationFrame(animateParticles);
-        }
-
-        window.addEventListener('mousemove', (e) => {
-            mouse.x = e.x;
-            mouse.y = e.y;
-        });
-
-        window.addEventListener('mouseleave', () => {
-            mouse.x = null;
-            mouse.y = null;
-        });
-
-        initParticles();
-        animateParticles();
     </script>
 </body>
 </html>
